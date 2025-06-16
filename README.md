@@ -2,12 +2,39 @@
 
 基于 pnpm workspace 实践的多包管理项目
 
-## apps - 业务系统目录
+## monorepo 常见的方案
+
+### 包管理
+- pnpm + workspace
+- yarn + workspace
+- lerna
+
+
+### 构建缓存
+
+### 增量构建
+
+- nx
+- turbo
+
+## pnpm 的优势
+
+中心化机制，解决依赖复用问题。
+
+- 集中依赖管理，通过软链接的形式，避免重复安装依赖
+  ![pnpm-workspace](./pnpm-workspace.png)
+- 安装并行提速机制
+- 依赖扁平化，不存在循环依赖地狱结构
+
+
+## 项目结构
+
+### apps - 业务系统目录
 
 - backend - 服务端业务
 - frontend - 前端业务
 
-## packages - 基础包目录
+### packages - 基础包目录
 
 - chart - 图表库
 - cli - 脚手架
